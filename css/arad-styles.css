@@ -1,0 +1,27 @@
+/**
+* Reserved metabox id for automatically show
+*
+*/
+#arad_gallery{
+	display: none;
+}
+#arad_video{
+	display: none;
+}
+#arad_audio{
+	display: none;
+}
+#arad_quote{
+	display: none;
+}
+.arad_hide{
+	display: none!important;
+}
+.arad_thumbnail {
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding: 0px;
+	margin-bottom: 10px;
+}
