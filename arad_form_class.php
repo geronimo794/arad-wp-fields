@@ -47,10 +47,10 @@ class arad_form_class{
 	*/
 	private function createInputText($field_info, $value_input){
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
-			<input style="width:100%;" type="text" name="'.$field_info['name'].'" id="'.$field_info['name'].'" value="'.$value_input.'"/>
+			<input style="width:100%;" type="text" name="'.$field_info['name'].'" id="'.$field_info['id'].'" value="'.$value_input.'"/>
 		</div>
 		');
 	}	
@@ -60,8 +60,8 @@ class arad_form_class{
 	*/
 	private function createInputRange($field_info, $value_input){
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
 			<table width="100%" border="0px">
 				<tr>
@@ -69,7 +69,7 @@ class arad_form_class{
 						<span id="val_'.$field_info['name'].strval(self::$arad_uniq).'">'.$value_input.'</span>
 					</td>
 					<td width="90%">
-						<input style="width:100%;" type="range" name="'.$field_info['name'].'" id="'.$field_info['name'].'" value="'.$value_input.'" min="'.$field_info['min'].'" max="'.$field_info['max'].'" onchange="document.getElementById(\'val_'.$field_info['name'].strval(self::$arad_uniq).'\').innerHTML =  this.value"/>
+						<input style="width:100%;" type="range" name="'.$field_info['name'].'" id="'.$field_info['id'].'" value="'.$value_input.'" min="'.$field_info['min'].'" max="'.$field_info['max'].'" onchange="document.getElementById(\'val_'.$field_info['name'].strval(self::$arad_uniq).'\').innerHTML =  this.value"/>
 					</td>
 				</tr>
 			</table>
@@ -96,10 +96,10 @@ class arad_form_class{
 		}
 		
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
-			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" />
+			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" id="'.$field_info['id'].'" />
 			<a class="arad_images button-secondary '.$hidden_upload.'" href="javascript:void(0);" data-name="'.$field_info['name'].'">Select Images</a>
 			<div class="'.$field_info['name'].'_imgsblock">
 				'.$images_show.'
@@ -125,10 +125,10 @@ class arad_form_class{
 		}
 		
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
-			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" />
+			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" id="'.$field_info['id'].'" />
 			<a class="arad_video button-secondary '.$hidden_upload.'" href="javascript:void(0);" data-name="'.$field_info['name'].'">Select Video</a>
 			<div class="'.$field_info['name'].'_infvid '.$hidden_remove.'">
 				<i class="icon-play-circle"></i> '.$video_name.'
@@ -154,10 +154,10 @@ class arad_form_class{
 		}
 		
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
-			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" />
+			<input type="hidden" name="'.$field_info['name'].'" value="'.$value_input.'" id="'.$field_info['id'].'" />
 			<a class="arad_audio button-secondary '.$hidden_upload.'" href="javascript:void(0);" data-name="'.$field_info['name'].'">Select Audio</a>
 			<div class="'.$field_info['name'].'_infaudio '.$hidden_remove.'">
 				<i class="icon-play-circle"></i> '.$audio_name.'
@@ -183,10 +183,10 @@ class arad_form_class{
 		endforeach;
 		
 		echo('
-		<div>
-			<label for="'.$field_info['name'].'"><strong>'.$field_info['title'].'</strong><label>
+		<div class='.$field_info['div_class'].'>
+			<label for="'.$field_info['id'].'"><strong>'.$field_info['title'].'</strong><label>
 			<br />
-			<select style="width:100%;" name="'.$field_info['name'].'" id="'.$field_info['name'].'"/>
+			<select style="width:100%;" name="'.$field_info['name'].'" id="'.$field_info['id'].'"/>
 				'.$options.'
 			</select>
 		</div>
@@ -198,6 +198,12 @@ class arad_form_class{
 		
 		if(!isset($return['name'])){
 			$return['name'] = '';
+		}
+		if(!isset($return['id'])){
+			$return['id'] = $return['name'];
+		}
+		if(!isset($return['div_class'])){
+			$return['div_class'] = 'arad_dv'.$return['name'];
 		}
 		if(!isset($return['type'])){
 			$return['type'] = 'text';
