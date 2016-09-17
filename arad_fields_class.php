@@ -35,8 +35,8 @@ class arad_fields_class{
 	public function createMetaBox(){
 		if(is_admin()) {
 			
-			wp_register_script('arad-scripts', self::$arad_dir.'/arad_wp_fields/js/arad-scripts.js', array('jquery'), '1.0.0', true);
-			wp_register_style('arad-styles', self::$arad_dir.'/arad_wp_fields/css/arad-styles.css', array(), '1.0.0');
+			wp_register_script('arad-scripts', self::$arad_dir.'/js/arad-scripts.js', array('jquery'), '1.0.0', true);
+			wp_register_style('arad-styles', self::$arad_dir.'/css/arad-styles.css', array(), '1.0.0');
 
 			wp_enqueue_style('arad-styles');
 			wp_enqueue_script('arad-scripts');
