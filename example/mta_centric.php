@@ -3,13 +3,13 @@
 * Including arad wp fields framework
 *
 */
-if (!class_exists('arad_fields_class') && file_exists(TMINT_FILEPATH.'/includes/arad_wp_fields/arad_fields_class.php')) {
-	require_once(TMINT_FILEPATH.'/includes/arad_wp_fields/arad_fields_class.php');
+if (!class_exists('arad_fields_class') && file_exists(get_template_directory().'/includes/arad_wp_fields/arad_fields_class.php')) {
+	require_once(get_template_directory().'/includes/arad_wp_fields/arad_fields_class.php');
 	if(!class_exists('arad_fields_class')){
 		return;
 	}
 }
-arad_fields_class::$arad_dir = TMINT_DIRECTORY.'/includes';
+arad_fields_class::$arad_dir = TMINT_DIRECTORY.'/arad-wp-fields-master/includes';
 
 /**
 * Metabox for review score
@@ -136,4 +136,8 @@ arad_fields_class::addMetaBox(
 		)
 	)
 );
+// Add aditional javascript @ js folder
+//arad_fields_class::embedScript('arad-centric-custom.js');
+// Add aditional style
+// arad_fields_class::embedStyle();
 arad_fields_class::createMetaBox();
