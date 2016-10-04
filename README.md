@@ -8,7 +8,7 @@ Step 1 :
 Dowload the arad wp fields from [here](https://github.com/geronimo794/arad-wp-fields/archive/master.zip) 
 
 Step 2 : Extract the folder to your some location of your wordpress theme.
-![Getting Started 1](http://pinten.net/arad_wp_fields/getting-started-1.jpg)
+![Getting Started 1](https://github.com/geronimo794/arad-wp-fields/raw/master/images/getting-started-1.jpg)
 
 Step 3 : Include the arad_fields_class.php to your php file (this file will be included at your function.php)
 ```php
@@ -64,14 +64,9 @@ Step 6 : Create the Metabox.
 arad_fields_class::createMetaBox();
 ```
 Step 7 : Enjoy your Metabox.
-![Getting Started 2](http://pinten.net/arad_wp_fields/getting-started-2.jpg)
+![Getting Started 2](https://github.com/geronimo794/arad-wp-fields/raw/master/images/getting-started-2.jpg)
 ## Example
 You can take look to another example of Meta Box [here](https://github.com/geronimo794/arad-wp-fields/blob/master/example/mta_centric.php).
 ## Changelogs
 Version 0.0.1 (Beta)
 - Add metabox, create metabox.
-
-## Contribution
-You can contribute to this open source with post the issue. I will work hard to developed this framework.
-
-
