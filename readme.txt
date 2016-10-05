@@ -1,8 +1,9 @@
+
 Arad Wordpress Fields
 
 Version 0.0.1 (Beta)
 
-PHP Framework for wordpress theme developer to automatically register the metabox with various kind of field types. With various function to make register metabox fields with clean and easy code.
+PHP Framework for wordpress theme developer to automatically register the metabox with some kind of field types. With various function to make register metabox fields with clean and easy code.
 Geting started
 
 Step 1 : Dowload the arad wp fields from here
@@ -63,6 +64,97 @@ Step 6 : Create the Metabox.
 arad_fields_class::createMetaBox();
 
 Step 7 : Enjoy your Metabox. Getting Started 2
+Field types
+- Input Text
+
+    Type : text
+    Options : title, name, div_class, id
+    Example :
+
+array(
+    'type' => 'text',
+    'title' => 'Input Text',
+    'name' => 'name',
+    'div_class' => 'name_class',
+    'id' => 'name_id'
+)
+
+- Range
+
+    Type : range
+    Options : title, name, div_class, id, min, max
+    Example :
+
+array(
+    'type' => 'range',
+    'title' => 'Distance',
+    'name' => 'distance',
+    'div_class' => 'distance_class',
+    'id' => 'distance_id',
+    'min' => 0,
+    'max' => 100
+)
+
+- Images
+
+    Type : images
+    Options : title, name, div_class, id
+    Example :
+
+array(
+    'type' => 'images',
+    'title' => 'Gallery',
+    'name' => 'gallery',
+    'div_class' => 'gallery_class',
+    'id' => 'gallery_id'
+)
+
+- Video
+
+    Type : video
+    Options : title, name, div_class, id
+    Example :
+
+array(
+    'type' => 'video',
+    'title' => 'Trailer',
+    'name' => 'trailer',
+    'div_class' => 'trailer_class',
+    'id' => 'trailer_id'
+)
+
+- Audio
+
+    Type : audio
+    Options : title, name, div_class, id
+    Example :
+
+array(
+    'type' => 'audio',
+    'title' => 'Sound Wave',
+    'name' => 'sound_wave',
+    'div_class' => 'sound_wave_class',
+    'id' => 'soundwave_id'
+)
+
+- Select
+
+    Type : select
+    Options : title, name, div_class, id, options
+    Example :
+
+array(
+    'type' => 'select',
+    'title' => 'Gender',
+    'name' => 'gender',
+    'div_class' => 'gender_class',
+    'id' => 'gender_id',
+    'options' => array(
+        'male' => 'Male',
+        'female' => 'Female'
+    )
+)
+
 Example
 
 You can take look to another example of Meta Box here.
@@ -71,3 +163,4 @@ Changelogs
 Version 0.0.1 (Beta)
 
     Add metabox, create metabox.
+
