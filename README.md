@@ -1,5 +1,5 @@
 # Arad Wordpress Fields 
-Version 0.0.1 (Beta)
+Version 1.0.0
 
 PHP Framework for wordpress theme developer to automatically register the metabox with some kind of field types. With various function to make register metabox fields with clean and easy code.
 
@@ -154,5 +154,5 @@ array(
 ## Example
 You can take look to another example of Meta Box [here](https://github.com/geronimo794/arad-wp-fields/blob/master/example/mta_centric.php).
 ## Changelogs
-Version 0.0.1 (Beta)
+Version 1.0.0
 - Add metabox, create metabox.
