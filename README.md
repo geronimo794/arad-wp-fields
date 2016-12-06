@@ -153,6 +153,7 @@ array(
 
 ## Example
 You can take look to another example of Meta Box [here](https://github.com/geronimo794/arad-wp-fields/blob/master/example/mta_centric.php).
+
 ## Changelogs
 Version 1.0.0
 - Add metabox, create metabox.
